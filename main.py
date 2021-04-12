@@ -1,14 +1,16 @@
 #DUE APRIL 26th
 
-
+'''
+Things we could do:
+- Implement a feature to check Balance
+- Implement a case where the user says there is already an account (and initialize some dummy accounts with it)
+'''
 import user,login, bankusers
 bankUsersClass = bankusers.bankusers([])
 login = login.login(bankUsersClass)
 
-isLoggedIn = False
-accessedUser = user.user("",0,0)
-
 isLoggedIn, accessedUser = login.isRegistered()
+
 while(isLoggedIn):
   action = str(input("\n\nWhat would you like to do? Deposit/Withdraw/Logout: "))
   if (action == "Logout"):

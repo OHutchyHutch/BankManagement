@@ -55,8 +55,6 @@ Main.py is the boss of the whole operation. We need to import every class for ma
 
 Next, we will create the bankUsersClass variable and make it the bankusers.py class with an empty array. Then, we will intialize login with the class we just created .
 
-Then, what we do is prepare the while loop by initializing isLoggedIn and accesedUser. This is a fail safe that should almost never be utilized as a user shouldn't be able to get past the next part.
-
 ```isLoggedIn, accessedUser = login.isRegistered()``` is probably a confusing line to read at first, but as you know to initialize a variable it's just x = 2. Why couldn't we initialize 2 variables at the same time? Recall how in login.py's loggingIn we have it return ```True``` **AND** ```accessedUser```. That is exactly what this does. We will give the bool ```True``` to isLoggedIn and the ```accessedUser``` to the ```accessedUser``` in the main class.
 
 At this point, we are officially considered to be logged in. Here we will prompt the user on what they want to do. Depending on their response, depends on what we will do. We will then run the function with the ```accessedUser``` we just assigned and bam. You got a working bank system!
