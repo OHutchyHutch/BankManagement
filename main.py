@@ -2,11 +2,12 @@
 
 '''
 Things we could do:
-- Implement a feature to check Balance
-- Implement a case where the user says there is already an account (and initialize some dummy accounts with it)
+- 
 '''
 import user,login, bankusers
 bankUsersClass = bankusers.bankusers([])
+bankUsersClass.addUsers("John", 123, 50)
+bankUsersClass.addUsers("Sally", 321, 0)
 login = login.login(bankUsersClass)
 
 isLoggedIn, accessedUser = login.isRegistered()

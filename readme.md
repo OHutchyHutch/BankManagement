@@ -53,7 +53,9 @@ In case you haven't noticed by now, this program can be thought of as a ladder. 
 Main.py is the boss of the whole operation. We need to import every class for main.py (this is because we want to have full control of all functions here. If you play your cards right and move things around, you could only require a single class if you really wanted)
 
 
-Next, we will create the bankUsersClass variable and make it the bankusers.py class with an empty array. Then, we will intialize login with the class we just created .
+Next, we will create the bankUsersClass variable and make it the bankusers.py class with an empty array. Then, we will create some dummy accounts so we can showcase if the user says Yes if there is already an account. 
+
+We then will intialize login with the bankUsersClass we just created.
 
 ```isLoggedIn, accessedUser = login.isRegistered()``` is probably a confusing line to read at first, but as you know to initialize a variable it's just x = 2. Why couldn't we initialize 2 variables at the same time? Recall how in login.py's loggingIn we have it return ```True``` **AND** ```accessedUser```. That is exactly what this does. We will give the bool ```True``` to isLoggedIn and the ```accessedUser``` to the ```accessedUser``` in the main class.
 

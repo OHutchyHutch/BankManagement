@@ -39,4 +39,5 @@ class login:
       self.bankUsersClass.addUsers(username, password, 0)
       print("\n\n\nACCOUNT CREATED... Loading login form\n\n\n")
       return(self.loggingIn())
-      
+    else:
+      return self.loggingIn()
