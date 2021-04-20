@@ -1,29 +1,39 @@
 #DUE APRIL 26th
 
+'''THE README IS OUTDATED. FRIDAY NIGHT I WILL UPDATE IT WITH EVERYTHING SO PRESENTERS CAN READ AND PRESENT BY MONDAY.
+
+Note: The readme still applies to 99% of the code. I've just moved stuff around and added a class, so feel free to read the readme if you wish.
 '''
-Things we could do:
-- 
-'''
-import user,login, bankusers
+
+import user,login, bankusers, messenger
 bankUsersClass = bankusers.bankusers([])
-bankUsersClass.addUsers("John", 123, 50)
-bankUsersClass.addUsers("Sally", 321, 0)
+bankUsersClass.addUsers("John", 123, 50, 700)
+bankUsersClass.addUsers("Sally", 321, 0, 350)
 login = login.login(bankUsersClass)
+messenger = messenger.messenger()
 
 isLoggedIn, accessedUser = login.isRegistered()
 
-while(isLoggedIn):
-  print("\n\n---------------")
-  print("Current Balance: $" + str(accessedUser.getMoney()))
-  print("---------------")
-  print("\n1. Deposit\n2. Withdraw\n3. Logout")
-  action = str(input("\n\nWhat would you like to do:  "))
-  if (action == "Logout" or action == "3"):
-    print("Goodbye, " + accessedUser.getName())
-    isLoggedIn = False
-    break
-  amount = int(input ("How much? "))
-  if (action == "Deposit" or action == "1"):
-    accessedUser.addMoney(amount)
-  elif (action == "Withdraw" or action == "2"):
-    accessedUser.removeMoney(amount)
+while True:
+  while(isLoggedIn):
+    messenger.actionForm(accessedUser.getMoney())
+    action = int(input("\n\nWhat would you like to do:  "))
+
+    if (action == 1):
+      amount = int(input ("Please Enter An Amount: $"))
+      accessedUser.addMoney(amount)
+
+    elif (action == 2):
+      amount = int(input ("Please Enter An Amount: $"))
+      accessedUser.removeMoney(amount)
+  
+    elif (action == 3):
+      messenger.creditForm(accessedUser.getCredit())
+      accessedUser.loanCheck()
+
+    elif (action == 4):
+      print("Goodbye, " + accessedUser.getName() + "\n\n\n")
+      isLoggedIn = False
+      break
+
+  isLoggedIn, accessedUser = login.isRegistered()

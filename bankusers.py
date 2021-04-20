@@ -4,5 +4,5 @@ class bankusers:
     self.usersArray = usersArray
   def accessUsers(self):
     return self.usersArray
-  def addUsers(self, username, password, deposit):
-    self.usersArray.append(user.user(str(username), int(password), int(deposit)))
+  def addUsers(self, username, password, deposit, credit):
+    self.usersArray.append(user.user(str(username), int(password), int(deposit), int(credit)))

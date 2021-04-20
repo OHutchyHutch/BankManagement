@@ -1,7 +1,7 @@
 import bankusers
 
 class login:
-  def __init__(self,bankUsersClass):
+  def __init__(self, bankUsersClass):
     self.bankUsersClass = bankUsersClass
   
   def loggingIn(self):
@@ -13,6 +13,7 @@ class login:
       accessedUser = None
       name = str(input("Username: "))
       #For each user in the array, check if their username exists.
+      i = 0
       for users in self.bankUsersClass.accessUsers():
         #If username is found, ask for password.
         if (users.getName() == name):
@@ -24,9 +25,10 @@ class login:
             return True, accessedUser
           else:
             print("Password incorrect! Retry \n\n")
-        #Username was not found.
-        else:
-          print("That name does not exist! \n")
+        #Username was not found and there was never a password.
+        if (i == len(self.bankUsersClass.accessUsers())-1 and password == None):
+          print("There are no users by that name!")
+        i += 1
 
   def isRegistered(self):
     answer = input("Do you already have an account with us? Yes/No : ")
@@ -36,7 +38,7 @@ class login:
       print("---------------------")
       username = input("Username: ")
       password = int(input("Password (Numbers Only): "))
-      self.bankUsersClass.addUsers(username, password, 0)
+      self.bankUsersClass.addUsers(username, password, 0, 0)
       print("\n\n\nACCOUNT CREATED... Loading login form\n\n\n")
       return(self.loggingIn())
     else:
