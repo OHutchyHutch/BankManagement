@@ -24,6 +24,12 @@ First we have ```def __init__```,
 ```removeMoney```
 * Remove the value from the arguments from the user's local value
 
+```getCredit```
+* Return the user's credit
+
+```creditCheck```
+* Check if the user's credit is above 650. If so, they qualify for a loan. If not, they do not qualify.
+
 # Next, bankusers.py
 At its core, bankusers is a manager for users. Think of it like a chest, where you store your toys (users) into and can access all of them from there. To do so, we need to import users
 
@@ -55,8 +61,11 @@ Main.py is the boss of the whole operation. We need to import every class for ma
 
 Next, we will create the bankUsersClass variable and make it the bankusers.py class with an empty array. Then, we will create some dummy accounts so we can showcase if the user says Yes if there is already an account. 
 
-We then will intialize login with the bankUsersClass we just created.
+We then will intialize login with the bankUsersClass we just created and also create some fake users with random data.
 
 ```isLoggedIn, accessedUser = login.isRegistered()``` is probably a confusing line to read at first, but as you know to initialize a variable it's just x = 2. Why couldn't we initialize 2 variables at the same time? Recall how in login.py's loggingIn we have it return ```True``` **AND** ```accessedUser```. That is exactly what this does. We will give the bool ```True``` to isLoggedIn and the ```accessedUser``` to the ```accessedUser``` in the main class.
 
 At this point, we are officially considered to be logged in. Here we will prompt the user on what they want to do. Depending on their response, depends on what we will do. We will then run the function with the ```accessedUser``` we just assigned and bam. You got a working bank system!
+
+# Messenger.py
+You may have noticed I skipped over messenger.py, all it does is print pre-defined messages out. I made this class solely just to clean up main.py a little bit more.

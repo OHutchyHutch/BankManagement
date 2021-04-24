@@ -8,5 +8,5 @@ class messenger:
     print("\n1. Deposit\n2. Withdraw\n3. Check If Applicable For Loan\n4. Logout")
   def creditForm(self, credit):
     print("\n\n---------------")
-    print("Current Balance: $" + str(credit))
+    print("Current Credit: " + str(credit))
     print("---------------")
