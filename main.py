@@ -1,10 +1,5 @@
 #DUE APRIL 26th
 
-'''THE README IS OUTDATED. FRIDAY NIGHT I WILL UPDATE IT WITH EVERYTHING SO PRESENTERS CAN READ AND PRESENT BY MONDAY.
-
-Note: The readme still applies to 99% of the code. I've just moved stuff around and added a class, so feel free to read the readme if you wish.
-'''
-
 import user,login, bankusers, messenger
 bankUsersClass = bankusers.bankusers([])
 bankUsersClass.addUsers("John", 123, 50, 700)
