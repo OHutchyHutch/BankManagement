@@ -1,4 +1,7 @@
-Hello! If I did this correctly, you should see this file on the right side of your screen. This file is my guide to the code and explanation of everything. You can open the other files and this will remain open on the right side of your browser.
+Hello! If I did this correctly, you should see this file on the right side of your screen (if not, on the tab to your right, click the "Markdown" tab. Make sure preview (on the top right of this current tab) is checked). 
+
+
+This file is my guide to the code and explanation of everything. You can open the other files and this will remain open on the right side of your browser.
 
 
 Now, let's get started by opening user.py

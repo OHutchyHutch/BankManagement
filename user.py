@@ -16,7 +16,10 @@ class user:
   def addMoney(self, amount):
     self.amount += amount
   def removeMoney(self, amount):
-    self.amount -= amount
+    if (self.amount < amount):
+      print("You cannot afford this withdrawal!")
+    else:
+      self.amount -= amount
   def getCredit(self):
     return self.credit
   def loanCheck(self):
